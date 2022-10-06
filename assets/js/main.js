@@ -27,7 +27,7 @@ const percentageUnder18= 20;
 
 const discountValue18 = (ticketPrice / 100) * percentageUnder18; 
 
-const finalPrice18 = ticketPrice - discountValue18;
+const finalPrice18 = ticketPrice - discountValue18.toFixed(2);
 
 
 // Applicare uno sconto del 40% per gli over 65
@@ -35,7 +35,10 @@ const percentageOver65= 40;
 
 const discountValue65 = (ticketPrice / 100) * percentageOver65; 
 
-const finalPrice65 = ticketPrice - discountValue65;
+const finalPrice65 = ticketPrice - discountValue65.toFixed(2);
+
+
+
 
 if (userAge < 18) {
     document.getElementById('price').innerHTML = `From Padova to Venice the price is: ${finalPrice18} $`;
