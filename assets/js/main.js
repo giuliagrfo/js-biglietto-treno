@@ -15,12 +15,17 @@ const kilometres = prompt('Quanti chilometri vuoi percorrere?');
 // Chiedere l'età del passeggero
 const userAge = prompt('Quanti anni hai?');
 
+// Chiedere nome città di partenza
+const departure = prompt('Città di partenza');
+
+// Chiedere nome città di arrivo
+const destination = prompt('Destinazione');
+
 // Calcolare il prezzo totale del viaggio
 const priceOfKilometer = 0.21;
 
 const ticketPrice = kilometres * 0.21;
 
-document.getElementById('price').innerHTML = `From Padova to Venice the price is: ${ticketPrice} $`;
 
 // Applicare uno sconto del 20% per i minorenni
 const percentageUnder18= 20;
@@ -41,9 +46,9 @@ const finalPrice65 = ticketPrice - discountValue65.toFixed(2);
 
 
 if (userAge < 18) {
-    document.getElementById('price').innerHTML = `From Padova to Venice the price is: ${finalPrice18} $`;
+    document.getElementById('price').innerHTML = `From ${departure} to ${destination} the price is: ${finalPrice18} $`;
 } else if (userAge > 65) {
-    document.getElementById('price').innerHTML = `From Padova to Venice the price is: ${finalPrice65} $`;
+    document.getElementById('price').innerHTML = `From ${departure} to ${destination} the price is: ${finalPrice65} $`;
 }
 
 
