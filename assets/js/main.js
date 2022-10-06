@@ -10,8 +10,14 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio,
 */
 
 // Chiedere numero di chilometri che vuole percorrere
-const kilometres = prompt('Quanti chilometri vuoi percorrere?')
+const kilometres = prompt('Quanti chilometri vuoi percorrere?');
 
 // Chiedere l'età del passeggero
+const userAge = prompt('Quanti anni hai?');
 
 // Calcolare il prezzo totale del viaggio
+const priceOfKilometer = 0.21;
+
+const ticketPrice = kilometres * 0.21 ;
+
+document.getElementById('price').innerHTML = `From Padova to Venice the price is: ${ticketPrice} $` ;
