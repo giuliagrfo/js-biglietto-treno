@@ -25,7 +25,7 @@ const destination = prompt('Destinazione');
 const priceOfKilometer = 0.21;
 
 const ticketPrice = kilometres * 0.21;
-
+const finalPrice = ticketPrice
 
 // Applicare uno sconto del 20% per i minorenni
 const percentageUnder18= 20;
@@ -49,6 +49,8 @@ if (userAge < 18) {
     document.getElementById('price').innerHTML = `From ${departure} to ${destination} the price is: ${finalPrice18} $`;
 } else if (userAge > 65) {
     document.getElementById('price').innerHTML = `From ${departure} to ${destination} the price is: ${finalPrice65} $`;
+} else {
+    document.getElementById('price').innerHTML = `From ${departure} to ${destination} the price is: ${finalPrice} $`;
 }
 
 
